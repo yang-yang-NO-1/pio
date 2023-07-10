@@ -176,7 +176,7 @@
         #ifdef ESP_ARDUINO_VERSION_MAJOR
         #define VER_ARDUINO_STR WM_STRING(ESP_ARDUINO_VERSION_MAJOR)  "."  WM_STRING(ESP_ARDUINO_VERSION_MINOR)  "."  WM_STRING(ESP_ARDUINO_VERSION_PATCH)
         #else
-        #define VER_ARDUINO_STR "Unknown"
+        #define VER_ARDUINO_STR "v3.2.0"
         #endif
     #endif
 #else 

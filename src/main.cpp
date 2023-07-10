@@ -209,12 +209,17 @@ void aligenieQuery(int32_t queryCode)
 void dataRead(const String &data)
 {
   BLINKER_LOG("Blinker readString: ", data);
-
+  int flag = data.toInt();
+  if (flag == 1)
+  {
+    wifiManager.resetSettings();
+    ESP.reset();
+    Blinker.print("resetSettings and reset ESP");
+  }
   Blinker.vibrate();
-
   uint32_t BlinkerTime = millis();
-
   Blinker.print("millis", BlinkerTime);
+  digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
 }
 
 void setup()

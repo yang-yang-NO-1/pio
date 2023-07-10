@@ -72,19 +72,19 @@ const char HTTP_FORM_PARAM_HEAD[]  PROGMEM = "<hr><br/>";
 const char HTTP_FORM_PARAM[]       PROGMEM = "<br/><input id='{i}' name='{n}' maxlength='{l}' value='{v}' {c}>\n"; // do not remove newline!
 
 const char HTTP_SCAN_LINK[]        PROGMEM = "<br/><form action='/wifi?refresh=1' method='POST'><button name='refresh' value='1'>刷新</button></form>";
-const char HTTP_SAVED[]            PROGMEM = "<div class='msg'>保存 Credentials<br/>Trying to connect ESP to network.<br />If it fails reconnect to AP to try again</div>";
-const char HTTP_PARAMSAVED[]       PROGMEM = "<div class='msg S'>Saved<br/></div>";
+const char HTTP_SAVED[]            PROGMEM = "<div class='msg'>保存凭证<br/>尝试将 ESP 连接到网络。<br />如果失败,请重新连接到AP重试</div>";
+const char HTTP_PARAMSAVED[]       PROGMEM = "<div class='msg S'>保存成功<br/></div>";
 const char HTTP_END[]              PROGMEM = "</div></body></html>";
 const char HTTP_ERASEBTN[]         PROGMEM = "<br/><form action='/erase' method='get'><button class='D'>擦除 WIFI 信息</button></form>";
 const char HTTP_UPDATEBTN[]        PROGMEM = "<br/><form action='/update' method='get'><button>上传</button></form>";
 const char HTTP_BACKBTN[]          PROGMEM = "<hr><br/><form action='/' method='get'><button>后退</button></form>";
 
-const char HTTP_STATUS_ON[]        PROGMEM = "<div class='msg S'><strong>Connected</strong> to {v}<br/><em><small>with IP {i}</small></em></div>";
-const char HTTP_STATUS_OFF[]       PROGMEM = "<div class='msg {c}'><strong>Not connected</strong> to {v}{r}</div>"; // {c=class} {v=ssid} {r=status_off}
-const char HTTP_STATUS_OFFPW[]     PROGMEM = "<br/>Authentication failure"; // STATION_WRONG_PASSWORD,  no eps32
-const char HTTP_STATUS_OFFNOAP[]   PROGMEM = "<br/>AP not found";   // WL_NO_SSID_AVAIL
-const char HTTP_STATUS_OFFFAIL[]   PROGMEM = "<br/>Could not connect"; // WL_CONNECT_FAILED
-const char HTTP_STATUS_NONE[]      PROGMEM = "<div class='msg'>No AP set</div>";
+const char HTTP_STATUS_ON[]        PROGMEM = "<div class='msg S'><strong>连接</strong> 到 {v}<br/><em><small>IP 为:{i}</small></em></div>";
+const char HTTP_STATUS_OFF[]       PROGMEM = "<div class='msg {c}'><strong>未连接</strong> 至 {v}{r}</div>"; // {c=class} {v=ssid} {r=status_off}
+const char HTTP_STATUS_OFFPW[]     PROGMEM = "<br/>认证失败"; // STATION_WRONG_PASSWORD,  no eps32
+const char HTTP_STATUS_OFFNOAP[]   PROGMEM = "<br/>AP 未发现";   // WL_NO_SSID_AVAIL
+const char HTTP_STATUS_OFFFAIL[]   PROGMEM = "<br/>无法连接"; // WL_CONNECT_FAILED
+const char HTTP_STATUS_NONE[]      PROGMEM = "<div class='msg'>未设置 AP</div>";
 const char HTTP_BR[]               PROGMEM = "<br/>";
 
 const char HTTP_STYLE[]            PROGMEM = "<style>"
@@ -230,7 +230,7 @@ const char S_GET[]                PROGMEM = "GET";
 const char S_POST[]               PROGMEM = "POST";
 const char S_NA[]                 PROGMEM = "Unknown";
 const char S_passph[]             PROGMEM = "********";
-const char S_titlewifisaved[]     PROGMEM = "123 saved";
+const char S_titlewifisaved[]     PROGMEM = "Credentials saved";
 const char S_titlewifisettings[]  PROGMEM = "Settings saved";
 const char S_titlewifi[]          PROGMEM = "config ESP";
 const char S_titleinfo[]          PROGMEM = "Info";
